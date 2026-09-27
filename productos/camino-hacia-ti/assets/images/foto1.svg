@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sunsetGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d233c"/>
+      <stop offset="40%" stop-color="#824259"/>
+      <stop offset="70%" stop-color="#df8270"/>
+      <stop offset="100%" stop-color="#e9b775"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sunsetGrad)"/>
+  <circle cx="400" cy="380" r="90" fill="#fff5ea" opacity="0.9"/>
+  <path d="M 0 520 Q 200 480 400 500 T 800 490 L 800 600 L 0 600 Z" fill="#1b121c"/>
+  <g transform="translate(370, 390) scale(0.7)">
+    <circle cx="30" cy="50" r="14" fill="#1b121c"/>
+    <path d="M 16 70 C 16 65 44 65 44 70 L 48 130 L 12 130 Z" fill="#1b121c"/>
+    <circle cx="65" cy="54" r="13" fill="#1b1c2b"/>
+    <path d="M 52 72 C 52 68 78 68 78 72 L 74 130 L 46 130 Z" fill="#1b1c2b"/>
+  </g>
+</svg>

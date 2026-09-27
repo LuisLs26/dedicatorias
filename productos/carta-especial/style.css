@@ -1,0 +1,246 @@
+/* ==========================================================================
+   CARTA ESPECIAL - ESTILOS AUTÓNOMOS (PAPEL Y SOBRE DELICADO)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap');
+
+:root {
+  --bg-dark: #0e0e10;
+  --paper-bg: #1c1a18;
+  --text-paper: #f0eae1;
+  --text-muted: #8c857b;
+  --accent-gold: #dfba7e;
+  --border-paper: rgba(223, 186, 126, 0.2);
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-paper);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.back-to-store {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 100;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.back-to-store:hover {
+  color: #ffffff;
+}
+
+/* Audio pill */
+.audio-pill {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-paper);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.audio-pill.muted {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+/* Pantalla de Sobre */
+.envelope-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-dark);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s ease;
+}
+
+.envelope-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.envelope-mockup {
+  width: 140px;
+  height: 100px;
+  background: #1c1a18;
+  border: 1px solid var(--border-paper);
+  border-radius: 12px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.envelope-seal {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+.envelope-recipient {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-style: italic;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+
+.envelope-tagline {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.btn-open-letter {
+  background: var(--accent-gold);
+  color: #12100e;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 9999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-open-letter:active {
+  transform: scale(0.96);
+}
+
+/* Carta Desplegada */
+.letter-viewport {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 50px 16px 80px;
+}
+
+.stationery-paper {
+  background: var(--paper-bg);
+  border: 1px solid var(--border-paper);
+  border-radius: 20px;
+  padding: 36px 24px 44px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.letter-header {
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(223, 186, 126, 0.15);
+}
+
+.letter-date-top {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+}
+
+.letter-greeting {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+}
+
+.letter-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.letter-paragraphs p {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-paper);
+}
+
+/* Foto Adjunta */
+.letter-photo-card {
+  margin: 28px 0;
+  padding: 12px;
+  background: #121110;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.letter-photo-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.letter-photo-caption {
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Footer de la Carta */
+.letter-footer {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(223, 186, 126, 0.15);
+}
+
+.letter-closing {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.letter-sig {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+}

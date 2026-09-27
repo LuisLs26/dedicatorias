@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCumple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#24191d"/>
+      <stop offset="100%" stop-color="#100b0e"/>
+    </linearGradient>
+    <linearGradient id="giftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3a6b2"/>
+      <stop offset="100%" stop-color="#d67b8a"/>
+    </linearGradient>
+    <filter id="giftGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgCumple)"/>
+  <!-- Gift Box Silhouette -->
+  <g transform="translate(190, 110)">
+    <!-- Box Body -->
+    <rect x="20" y="70" width="180" height="150" rx="10" fill="url(#giftGrad)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.5"/>
+    <!-- Lid -->
+    <rect x="10" y="45" width="200" height="35" rx="8" fill="#dfba7e" stroke="#fff" stroke-width="1"/>
+    <!-- Ribbon Vertical -->
+    <rect x="95" y="70" width="30" height="150" fill="#dfba7e"/>
+    <rect x="95" y="45" width="30" height="35" fill="#fceade"/>
+    <!-- Bow -->
+    <path d="M 110 45 C 80 15 60 40 100 45 Z" fill="#dfba7e" filter="url(#giftGlow)"/>
+    <path d="M 110 45 C 140 15 160 40 120 45 Z" fill="#dfba7e" filter="url(#giftGlow)"/>
+    <circle cx="110" cy="45" r="8" fill="#fceade"/>
+  </g>
+  <!-- Confetti / Sparkles -->
+  <rect x="120" y="80" width="8" height="8" rx="2" fill="#ffd166" transform="rotate(25 120 80)"/>
+  <rect x="470" y="100" width="10" height="6" rx="2" fill="#f3a6b2" transform="rotate(-30 470 100)"/>
+  <rect x="140" y="290" width="9" height="9" rx="2" fill="#45d189" transform="rotate(45 140 290)"/>
+  <rect x="450" y="280" width="7" height="11" rx="2" fill="#7971e9" transform="rotate(15 450 280)"/>
+  <circle cx="280" cy="60" r="3" fill="#fff" opacity="0.9"/>
+  <circle cx="340" cy="80" r="2.5" fill="#dfba7e" opacity="0.9"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAmistad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b2126"/>
+      <stop offset="100%" stop-color="#0e1114"/>
+    </linearGradient>
+    <filter id="friendGlow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgAmistad)"/>
+  <!-- Polaroid frames overlapping -->
+  <g transform="translate(180, 80) rotate(-6 100 120)">
+    <rect x="0" y="0" width="160" height="200" rx="8" fill="#ffffff" filter="url(#friendGlow)"/>
+    <rect x="12" y="12" width="136" height="136" rx="4" fill="#3a4055"/>
+    <circle cx="80" cy="70" r="30" fill="#f3a6b2" opacity="0.8"/>
+  </g>
+  <g transform="translate(260, 90) rotate(8 100 120)">
+    <rect x="0" y="0" width="160" height="200" rx="8" fill="#faf6f0" filter="url(#friendGlow)"/>
+    <rect x="12" y="12" width="136" height="136" rx="4" fill="#554b3a"/>
+    <circle cx="80" cy="70" r="28" fill="#dfba7e" opacity="0.8"/>
+    <!-- Heart pin -->
+    <circle cx="80" cy="-6" r="10" fill="#c04e5d"/>
+  </g>
+  <path d="M 120 320 Q 300 280 480 320" fill="none" stroke="#dfba7e" stroke-width="2" stroke-dasharray="6,6"/>
+</svg>

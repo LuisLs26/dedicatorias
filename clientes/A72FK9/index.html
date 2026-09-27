@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Camino hacia ti</title>
+  
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <a href="../../" id="backToStore" class="back-to-store" style="display: none;">← Tienda</a>
+
+  <canvas id="petalsCanvas"></canvas>
+
+  <button id="audioToggle" class="audio-toggle" aria-label="Música">
+    <span>Música</span>
+  </button>
+
+  <!-- Cortina de Entrada -->
+  <div id="introCurtain" class="intro-curtain">
+    <div class="intro-box">
+      <h1 id="introRecipient" class="intro-title">Para ti...</h1>
+      <p id="introTagline" class="intro-sub">Tengo algo especial para ti.</p>
+      <button id="btnStart" class="btn-start">Comenzar</button>
+    </div>
+  </div>
+
+  <!-- Recorrido Vertical -->
+  <main class="camino-viewport">
+    <div class="camino-track">
+      <div class="vertical-light-line"></div>
+
+      <div id="milestonesContainer"></div>
+
+      <!-- Flor interactiva -->
+      <div class="camino-milestone">
+        <div class="milestone-dot special"></div>
+        <div class="milestone-content">
+          <button id="flowerBtn" class="flower-touch-btn" aria-label="Tocar flor">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <p class="flower-label">Toca para descubrir</p>
+          <div id="flowerBox" class="flower-revealed-box">
+            <p id="secretFlowerText"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final -->
+      <div class="final-section">
+        <button id="btnDiscover" class="btn-discover">Hay una última cosa que quiero decirte...</button>
+        <div id="finalCard" class="final-card">
+          <p id="finalBody" class="final-text"></p>
+          <p id="finalSignature" class="final-sig"></p>
+          <span id="finalDate" class="final-date"></span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="./config.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

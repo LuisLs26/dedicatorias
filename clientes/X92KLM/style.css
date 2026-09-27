@@ -1,0 +1,212 @@
+/* ==========================================================================
+   NUESTRA HISTORIA - ESTILOS EDITORIALES AUTÓNOMOS
+   Línea de tiempo con fotografías protagonistas y ritmo visual tipo revista
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+
+:root {
+  --bg: #121214;
+  --bg-card: #1a1a1e;
+  --text-primary: #f5f5f7;
+  --text-secondary: #9a9aa2;
+  --accent-gold: #e5c158;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.timeline-container {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+}
+
+.back-to-store {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 100;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  background: rgba(26, 26, 30, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.back-to-store:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Audio pill */
+.audio-pill-btn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 100;
+  background: rgba(26, 26, 30, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.audio-pill-btn.muted {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* Header Editorial */
+.timeline-header {
+  text-align: center;
+  padding: 20px 0 50px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 40px;
+}
+
+.editorial-eyebrow {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+}
+
+.editorial-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.editorial-intro {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Momentos / Capítulos */
+.moments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.moment-chapter {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.moment-chapter.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.moment-date-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+}
+
+.moment-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.moment-photo-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 14px;
+  background: #000;
+}
+
+.moment-photo-wrap img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.moment-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Footer Dedicatoria */
+.timeline-footer {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+}
+
+.footer-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 30px 22px;
+}
+
+.footer-msg {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.footer-sig {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.footer-date {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}

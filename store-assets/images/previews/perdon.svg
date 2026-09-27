@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPerdon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191924"/>
+      <stop offset="100%" stop-color="#0b0b10"/>
+    </linearGradient>
+    <filter id="candleGlow">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgPerdon)"/>
+  <!-- Gentle Candle / Warm Glow Motif -->
+  <g transform="translate(250, 120)">
+    <!-- Candle Base -->
+    <rect x="30" y="90" width="40" height="110" rx="6" fill="#ded7ce" stroke="rgba(255, 255, 255, 0.1)"/>
+    <!-- Wick -->
+    <line x1="50" y1="90" x2="50" y2="72" stroke="#333" stroke-width="2"/>
+    <!-- Flame Outer Glow -->
+    <circle cx="50" cy="55" r="35" fill="rgba(255, 209, 102, 0.2)" filter="url(#candleGlow)"/>
+    <!-- Flame Core -->
+    <path d="M 50 40 C 42 55 42 68 50 72 C 58 68 58 55 50 40 Z" fill="#ffd166" filter="url(#candleGlow)"/>
+    <path d="M 50 48 C 45 58 45 66 50 69 C 55 66 55 58 50 48 Z" fill="#ffffff"/>
+  </g>
+  <!-- Gentle Origami Crane silhouette -->
+  <path d="M 160 180 L 190 140 L 220 180 L 190 200 Z" fill="rgba(243, 166, 178, 0.4)" stroke="#f3a6b2" stroke-width="1.5"/>
+  <path d="M 440 210 L 410 170 L 380 210 L 410 230 Z" fill="rgba(223, 186, 126, 0.4)" stroke="#dfba7e" stroke-width="1.5"/>
+</svg>

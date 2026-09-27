@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Una Carta Para Ti</title>
+  
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <a href="../../" id="backToStore" class="back-to-store" style="display: none;">← Tienda</a>
+
+  <button id="audioToggle" class="audio-pill" aria-label="Música">
+    <span>Música</span>
+  </button>
+
+  <!-- Pantalla del Sobre Cerrado -->
+  <div id="envelopeScreen" class="envelope-screen">
+    <div class="envelope-container">
+      <div class="envelope-mockup">
+        <div class="envelope-seal">💌</div>
+      </div>
+      <p class="envelope-recipient" id="envelopeRecipient">Para ti...</p>
+      <p class="envelope-tagline">Hay algo que quería escribirte.</p>
+      <button id="btnOpenLetter" class="btn-open-letter">Abrir carta</button>
+    </div>
+  </div>
+
+  <!-- Contenido de la Carta Desplegada -->
+  <main id="letterContent" class="letter-viewport">
+    <article class="stationery-paper">
+      <header class="letter-header">
+        <span id="letterDate" class="letter-date-top"></span>
+        <h1 id="letterGreeting" class="letter-greeting"></h1>
+      </header>
+
+      <div id="paragraphsContainer" class="letter-paragraphs"></div>
+
+      <!-- Foto adjunta opcional -->
+      <div id="letterPhotoFrame" class="letter-photo-card" style="display: none;">
+        <img id="letterPhotoImg" src="" alt="Fotografía" loading="lazy" />
+        <p id="letterPhotoCaption" class="letter-photo-caption"></p>
+      </div>
+
+      <footer class="letter-footer">
+        <p id="letterClosing" class="letter-closing"></p>
+        <p id="letterSignature" class="letter-sig"></p>
+      </footer>
+    </article>
+  </main>
+
+  <script src="./config.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

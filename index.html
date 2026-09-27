@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>DEDICA • Regalos Digitales</title>
+  
+  <meta name="description" content="Páginas interactivas hechas para una persona en específico." />
+  <meta property="og:title" content="DEDICA • Regalos Digitales" />
+  <meta property="og:description" content="Regala algo que no esperaba. Páginas interactivas hechas para una persona en específico." />
+  <meta property="og:image" content="./store-assets/images/og-image.svg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/svg+xml" href="./store-assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./store-assets/css/global.css" />
+
+  <style>
+    /* Hero */
+    .hero-section {
+      padding: 50px 0 45px;
+      text-align: center;
+    }
+    .hero-title {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+    
+    /* Stream de Productos */
+    .products-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      margin-bottom: 70px;
+    }
+
+    .product-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-preview-wrap {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .product-preview-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-meta {
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .product-summary {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      max-width: 320px;
+      margin: 0 auto 20px;
+    }
+
+    .product-actions-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .product-actions-group .btn-primary {
+      width: 100%;
+      max-width: 260px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-row">
+      <a href="./" class="brand-link" aria-label="DEDICA">DEDICA</a>
+      <div class="header-links">
+        <a href="./catalogo/" class="header-link">Catálogo</a>
+        <a href="https://wa.me/51988799404" target="_blank" class="header-link">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero-section">
+      <h1 class="hero-title">
+        Regala algo<br>que no esperaba.
+      </h1>
+      <p class="hero-desc">
+        Páginas interactivas hechas<br>para una persona en específico.
+      </p>
+      <a href="#experiencias" class="btn btn-primary">
+        Ver diseños
+      </a>
+    </section>
+
+    <!-- Lista de Diseños Grandes -->
+    <section id="experiencias" class="products-stream">
+
+      <!-- 1. Camino hacia ti -->
+      <article class="product-block">
+        <div class="product-preview-wrap">
+          <img src="./store-assets/images/previews/camino.svg" alt="Camino hacia ti" loading="lazy" />
+        </div>
+        <div class="product-meta">
+          <h2 class="product-title">Camino hacia ti</h2>
+          <p class="product-summary">
+            Un recorrido que termina en algo que quieres decirle.
+          </p>
+          <div class="product-actions-group">
+            <button onclick="openSheet('Camino hacia ti')" class="btn btn-primary">
+              Comprar
+            </button>
+            <a href="./productos/camino-hacia-ti/?demo=1" class="btn btn-text">
+              Ver demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Nuestra historia -->
+      <article class="product-block">
+        <div class="product-preview-wrap">
+          <img src="./store-assets/images/previews/galaxia.svg" alt="Nuestra historia" loading="lazy" />
+        </div>
+        <div class="product-meta">
+          <h2 class="product-title">Nuestra historia</h2>
+          <p class="product-summary">
+            Sus momentos convertidos en una pequeña experiencia.
+          </p>
+          <div class="product-actions-group">
+            <button onclick="openSheet('Nuestra historia')" class="btn btn-primary">
+              Comprar
+            </button>
+            <a href="./productos/nuestra-historia/?demo=1" class="btn btn-text">
+              Ver demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Carta especial -->
+      <article class="product-block">
+        <div class="product-preview-wrap">
+          <img src="./store-assets/images/previews/carta.svg" alt="Carta especial" loading="lazy" />
+        </div>
+        <div class="product-meta">
+          <h2 class="product-title">Carta especial</h2>
+          <p class="product-summary">
+            Hay cosas que se sienten mejor cuando se descubren.
+          </p>
+          <div class="product-actions-group">
+            <button onclick="openSheet('Carta especial')" class="btn btn-primary">
+              Comprar
+            </button>
+            <a href="./productos/carta-especial/?demo=1" class="btn btn-text">
+              Ver demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       BOTTOM SHEET NATIVO (¿Cómo lo quieres?)
+       ========================================================================== -->
+  <div id="buySheet" class="sheet-overlay" role="dialog" aria-modal="true">
+    <div class="sheet-dialog">
+      <div class="sheet-grabber"></div>
+
+      <div class="sheet-header">
+        <h3 id="sheetProductName" class="sheet-product-name">Camino hacia ti</h3>
+        <p class="sheet-subtitle">¿Cómo lo quieres?</p>
+      </div>
+
+      <div class="sheet-options-list">
+        <!-- Opción 1: Link personalizado -->
+        <div class="sheet-option-block">
+          <span class="sheet-option-label">Link personalizado</span>
+          <p class="sheet-option-desc">
+            Nosotros lo preparamos y te entregamos un enlace listo para compartir.
+          </p>
+          <button onclick="chooseOption('link')" class="sheet-action-btn">
+            Quiero el link
+          </button>
+        </div>
+
+        <!-- Opción 2: Proyecto completo -->
+        <div class="sheet-option-block">
+          <span class="sheet-option-label">Proyecto completo</span>
+          <p class="sheet-option-desc">
+            Recibe todos los archivos para editarlo o usarlo por tu cuenta.
+          </p>
+          <button onclick="chooseOption('archivo')" class="sheet-action-btn">
+            Quiero los archivos
+          </button>
+        </div>
+      </div>
+
+      <button onclick="closeSheet()" class="sheet-cancel-btn">
+        Cancelar
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 DEDICA • WhatsApp: +51 988 799 404</p>
+    </div>
+  </footer>
+
+  <script src="./store-assets/js/store.js"></script>
+</body>
+</html>

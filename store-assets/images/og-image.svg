@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141520"/>
+      <stop offset="50%" stop-color="#0c0d12"/>
+      <stop offset="100%" stop-color="#06060a"/>
+    </linearGradient>
+    <linearGradient id="ogGoldText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f3a6b2"/>
+      <stop offset="100%" stop-color="#dfba7e"/>
+    </linearGradient>
+    <filter id="ogGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+
+  <!-- Subtle glow circles -->
+  <circle cx="200" cy="180" r="250" fill="rgba(243, 166, 178, 0.08)" filter="url(#ogGlow)"/>
+  <circle cx="1000" cy="450" r="300" fill="rgba(223, 186, 126, 0.06)" filter="url(#ogGlow)"/>
+
+  <!-- Logo Mark -->
+  <g transform="translate(100, 100)">
+    <path d="M24 10c-3.5-5-11-4.8-14 0-3.5 5.5-1.2 12.8 14 22.4 15.2-9.6 17.5-16.9 14-22.4-3-4.8-10.5-5-14 0z" fill="#f3a6b2" filter="url(#ogGlow)"/>
+    <text x="50" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="700" fill="#ffffff" letter-spacing="4">DEDICA</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="100" y="270" font-family="'Plus Jakarta Sans', sans-serif" font-size="54" font-weight="700" fill="url(#ogGoldText)" letter-spacing="-1">
+    Convierte lo que sientes
+  </text>
+  <text x="100" y="340" font-family="'Plus Jakarta Sans', sans-serif" font-size="54" font-weight="700" fill="url(#ogGoldText)" letter-spacing="-1">
+    en algo que puedan vivir.
+  </text>
+
+  <!-- Tagline -->
+  <text x="100" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="400" fill="#a6abbd">
+    Experiencias digitales personalizadas para aniversarios, amor y momentos únicos.
+  </text>
+
+  <!-- Badge preview -->
+  <g transform="translate(100, 480)">
+    <rect width="280" height="50" rx="25" fill="rgba(243, 166, 178, 0.15)" stroke="#f3a6b2" stroke-width="1.5"/>
+    <text x="140" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="600" fill="#f3a6b2" text-anchor="middle">
+      ✨ Ver experiencias interactivas
+    </text>
+  </g>
+</svg>

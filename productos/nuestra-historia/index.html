@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Nuestra Historia</title>
+  
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <a href="../../" id="backToStore" class="back-to-store" style="display: none;">← Tienda</a>
+
+  <!-- Audio Toggle -->
+  <button id="audioToggle" class="audio-pill-btn" aria-label="Música">
+    <span>Música</span>
+  </button>
+
+  <main class="timeline-container">
+    <!-- Header Editorial -->
+    <header class="timeline-header">
+      <span id="headerSub" class="editorial-eyebrow"></span>
+      <h1 id="headerTitle" class="editorial-title"></h1>
+      <p id="headerIntro" class="editorial-intro"></p>
+    </header>
+
+    <!-- Lista de Capítulos / Momentos -->
+    <section id="momentsList" class="moments-list"></section>
+
+    <!-- Dedicatoria Final -->
+    <footer class="timeline-footer">
+      <div class="footer-card">
+        <p id="finalMessage" class="footer-msg"></p>
+        <p id="finalSignature" class="footer-sig"></p>
+        <span id="finalDate" class="footer-date"></span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./config.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
